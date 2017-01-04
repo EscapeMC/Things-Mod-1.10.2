@@ -12,6 +12,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.network.play.client.CPacketPlayer.Position;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
@@ -25,7 +26,7 @@ public class test_bag extends Item {
 	
 	public test_bag() {
 		
-
+		this.setMaxStackSize(1);
 		setUnlocalizedName(Reference.ModItems.TEST_BAG.getUnlocalizedName());
 		setRegistryName(Reference.ModItems.TEST_BAG.getRegistryName());
 	

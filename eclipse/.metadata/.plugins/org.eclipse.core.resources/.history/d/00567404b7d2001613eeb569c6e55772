@@ -1,0 +1,16 @@
+[
+{
+  "modid": "tm",
+  "name": "Things Mod",
+  "description": "Mod for testing things!",
+  "version": "1.0.0.1",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["EscapeMC"],
+  "credits": "EscapeMC, and his genius idea of doing this!",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

@@ -20,40 +20,28 @@ public class GuiHandler implements IGuiHandler {
 	
 	
 
-	@Override
-	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-		BlockPos pos = new BlockPos(x, y, z);
-		if(ID == TEST_CHEST) {
-			TileEntity tileEntity = world.getTileEntity(pos);
-			if(tileEntity instanceof TileEntityTestChest){
-				return new ContainerTestChest(player.inventory, (TileEntityTestChest) tileEntity);
-			}
-		}
-		if(ID == TEST_BAG) {
-			return new ContainerTestBag(player.inventory);
-
-		}
-		return null;
-	}
+    @Override
+    public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
+        TileEntity tileEntity = world.getTileEntity(new BlockPos(x, y, z));
+        switch (ID){
+            case TEST_CHEST:
+            	return new ContainerTestChest(player.inventory, (TileEntityTestChest) tileEntity);
+            case TEST_BAG:
+                return new ContainerTestBag(player.inventory);
+        }
+        return null;
+    }
 	
-	@Override
-	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-		BlockPos pos = new BlockPos(x, y, z);
-		if(ID == TEST_CHEST) {
-			TileEntity tileEntity = world.getTileEntity(pos);
-			if(tileEntity instanceof TileEntityTestChest){
-				return new gui_test_chest(new ContainerTestChest(player.inventory, (TileEntityTestChest)tileEntity), (TileEntityTestChest) tileEntity);
-			}
-		if(ID == TEST_BAG) {	
-			
-			return new GuiTestBag(new ContainerTestBag(player.inventory));
-
-			
-		}
-		
-		}
-		return null;
-	}
-
+    @Override
+    public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
+        TileEntity tileEntity = world.getTileEntity(new BlockPos(x, y, z));
+        switch (ID) {
+            case TEST_CHEST:
+                return new gui_test_chest(new ContainerTestChest(player.inventory, (TileEntityTestChest)tileEntity), (TileEntityTestChest) tileEntity);
+            case TEST_BAG:
+                return new GuiTestBag(new ContainerTestBag(player.inventory));
+        }
+        return null;
+    }
 
 }
