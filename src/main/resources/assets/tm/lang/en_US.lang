@@ -6,6 +6,7 @@ item.test_bag.name=Test Bag
 tile.test_furnace.name=Test Furnace
 tile.lit_test_furnace.name=Lit Test Furnace
 tile.test_chest.name=Test Chest
+tile.black_hole.name=Black Hole...
 
 item.test_helmet.name=Test Helmet
 item.test_chestplate.name=Test Chestplate
@@ -15,6 +16,7 @@ item.test_boots.name=Test Boots
 container.test_furnace=Test Furnace
 container.test_chest=Test Chest
 container.test_bag=Test Bag
+container.black_hole=Black Hole...
 
 itemGroup.ThingsModTab=Things Mod Tab
 

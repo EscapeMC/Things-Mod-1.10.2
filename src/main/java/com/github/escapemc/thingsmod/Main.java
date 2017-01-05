@@ -4,6 +4,7 @@ import com.github.escapemc.thingsmod.handlers.GuiHandler;
 import com.github.escapemc.thingsmod.init.ModBlocks;
 import com.github.escapemc.thingsmod.init.ModItems;
 import com.github.escapemc.thingsmod.proxies.CommonProxy;
+import com.github.escapemc.thingsmod.tileentity.TileEntityBlackHole;
 import com.github.escapemc.thingsmod.tileentity.TileEntityTestChest;
 import com.github.escapemc.thingsmod.tileentity.TileEntityTestFurnace;
 
@@ -48,6 +49,7 @@ public class Main {
 
 		GameRegistry.registerTileEntity(TileEntityTestFurnace.class, Reference.MOD_ID + "TileEntityTestFurnace");
 		GameRegistry.registerTileEntity(TileEntityTestChest.class, Reference.MOD_ID + "TileEntityTestChest");
+		GameRegistry.registerTileEntity(TileEntityBlackHole.class, Reference.MOD_ID + "TileEntityBlackHole");
 		
 		proxy.init();
 	

@@ -1,9 +1,12 @@
 package com.github.escapemc.thingsmod.handlers;
 
+import com.github.escapemc.thingsmod.client.gui.GuiBlackHole;
 import com.github.escapemc.thingsmod.client.gui.GuiTestBag;
 import com.github.escapemc.thingsmod.client.gui.gui_test_chest;
+import com.github.escapemc.thingsmod.container.ContainerBlackHole;
 import com.github.escapemc.thingsmod.container.ContainerTestBag;
 import com.github.escapemc.thingsmod.container.ContainerTestChest;
+import com.github.escapemc.thingsmod.tileentity.TileEntityBlackHole;
 import com.github.escapemc.thingsmod.tileentity.TileEntityTestChest;
 
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,6 +19,7 @@ public class GuiHandler implements IGuiHandler {
 	
 	public static final int TEST_CHEST = 37;
 	public static final int TEST_BAG = 38;
+	public static final int BLACK_HOLE = 39;
 	
 	
 	
@@ -28,6 +32,8 @@ public class GuiHandler implements IGuiHandler {
             	return new ContainerTestChest(player.inventory, (TileEntityTestChest) tileEntity);
             case TEST_BAG:
                 return new ContainerTestBag(player.inventory);
+            case BLACK_HOLE:
+            	return new ContainerBlackHole(player.inventory, (TileEntityBlackHole) tileEntity);
         }
         return null;
     }
@@ -40,6 +46,8 @@ public class GuiHandler implements IGuiHandler {
                 return new gui_test_chest(new ContainerTestChest(player.inventory, (TileEntityTestChest)tileEntity), (TileEntityTestChest) tileEntity);
             case TEST_BAG:
                 return new GuiTestBag(new ContainerTestBag(player.inventory));
+            case BLACK_HOLE:
+            	return new GuiBlackHole(new ContainerBlackHole(player.inventory, (TileEntityBlackHole) tileEntity), (TileEntityBlackHole) tileEntity);
         }
         return null;
     }

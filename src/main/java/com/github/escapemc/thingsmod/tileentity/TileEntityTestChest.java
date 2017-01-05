@@ -29,6 +29,7 @@ public class TileEntityTestChest extends TileEntity {
 	@Override
 	public void readFromNBT(NBTTagCompound compound) {
 		inputSlot.deserializeNBT(compound.getCompoundTag("inputSlot"));
+		super.readFromNBT(compound);
 	}
 
 	@Override

@@ -3,7 +3,7 @@ package com.github.escapemc.thingsmod;
 public class Reference {
 
 	public static final String MOD_ID = "tm";
-	public static final String MOD_VERSION = "1.1.0.1";
+	public static final String MOD_VERSION = "1.0.0.1";
 	public static final String MOD_NAME = "Things Mod";
 	public static final String ACCEPTED_VERSIONS = "[1.9.4,1.10.2]";
 	
@@ -31,6 +31,7 @@ public class Reference {
 		
 		TEST_BAG("test_bag", "test_bag"),
 		
+		BLACK_HOLE("black_hole", "black_hole"),
 		TEST_CHEST("test_chest", "test_chest");
 	
 	

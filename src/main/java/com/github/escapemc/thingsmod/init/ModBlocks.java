@@ -1,6 +1,7 @@
 package com.github.escapemc.thingsmod.init;
 
 import com.github.escapemc.thingsmod.Main;
+import com.github.escapemc.thingsmod.blocks.black_hole;
 import com.github.escapemc.thingsmod.blocks.test_block;
 import com.github.escapemc.thingsmod.blocks.test_chest;
 import com.github.escapemc.thingsmod.blocks.test_furnace;
@@ -21,6 +22,7 @@ public class ModBlocks {
 	public static Block test_furnace;
 	public static Block lit_test_furnace;
 	public static Block test_chest;
+	public static Block black_hole;
 	
 	public static void init() {
 		
@@ -30,6 +32,8 @@ public class ModBlocks {
 		lit_test_furnace = new test_furnace(Material.ROCK, true, "lit_test_furnace");
 		
 		test_chest = new test_chest(Material.ROCK).setCreativeTab(Main.ThingsModTab);
+		
+		black_hole = new black_hole(Material.CAKE).setCreativeTab(Main.ThingsModTab);
 		
 		
 		
@@ -44,6 +48,7 @@ public class ModBlocks {
 		
 		ModBlocks.registerBlock(test_chest);
 		
+		ModBlocks.registerBlock(black_hole);
 		
 		
 	}
@@ -57,7 +62,7 @@ public class ModBlocks {
 		
 		registerRender(test_chest);
 		
-		
+		registerRender(black_hole);
 		
 		
 	}

@@ -1,0 +1,35 @@
+item.test_item.name=Test Item
+tile.test_block.name=Test Block
+
+item.test_bag.name=Test Bag
+
+tile.test_furnace.name=Test Furnace
+tile.lit_test_furnace.name=Lit Test Furnace
+tile.test_chest.name=Test Chest
+
+item.test_helmet.name=Test Helmet
+item.test_chestplate.name=Test Chestplate
+item.test_leggings.name=Test Leggings
+item.test_boots.name=Test Boots
+
+container.test_furnace=Test Furnace
+container.test_chest=Test Chest
+container.test_bag=Test Bag
+
+itemGroup.ThingsModTab=Things Mod Tab
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
